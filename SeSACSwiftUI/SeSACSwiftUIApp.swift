@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-@main
+@main   //어떤 화면으로 시작할지 설정해주는 파일
 struct SeSACSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MenuView()
         }
     }
 }
