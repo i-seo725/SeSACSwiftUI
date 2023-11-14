@@ -13,6 +13,8 @@
 		F47DD5DD2B01A8C100997462 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47DD5DC2B01A8C100997462 /* Preview Assets.xcassets */; };
 		F47DD5E42B01B96200997462 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DD5E32B01B96200997462 /* MenuView.swift */; };
 		F47DD5E62B01C89700997462 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DD5E52B01C89700997462 /* RenderView.swift */; };
+		F47DD62B2B03070B00997462 /* TamagotchiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DD62A2B03070B00997462 /* TamagotchiView.swift */; };
+		F47DD62D2B03379200997462 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DD62C2B03379200997462 /* MovieView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		F47DD5DC2B01A8C100997462 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F47DD5E32B01B96200997462 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		F47DD5E52B01C89700997462 /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
+		F47DD62A2B03070B00997462 /* TamagotchiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiView.swift; sourceTree = "<group>"; };
+		F47DD62C2B03379200997462 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,11 @@
 				F47DD5D52B01A8BF00997462 /* SeSACSwiftUIApp.swift */,
 				F47DD5E32B01B96200997462 /* MenuView.swift */,
 				F47DD5E52B01C89700997462 /* RenderView.swift */,
+				F47DD62A2B03070B00997462 /* TamagotchiView.swift */,
 				F47DD5D72B01A8BF00997462 /* ContentView.swift */,
 				F47DD5D92B01A8C100997462 /* Assets.xcassets */,
 				F47DD5DB2B01A8C100997462 /* Preview Content */,
+				F47DD62C2B03379200997462 /* MovieView.swift */,
 			);
 			path = SeSACSwiftUI;
 			sourceTree = "<group>";
@@ -144,6 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47DD5D82B01A8BF00997462 /* ContentView.swift in Sources */,
+				F47DD62D2B03379200997462 /* MovieView.swift in Sources */,
+				F47DD62B2B03070B00997462 /* TamagotchiView.swift in Sources */,
 				F47DD5E42B01B96200997462 /* MenuView.swift in Sources */,
 				F47DD5E62B01C89700997462 /* RenderView.swift in Sources */,
 				F47DD5D62B01A8BF00997462 /* SeSACSwiftUIApp.swift in Sources */,
