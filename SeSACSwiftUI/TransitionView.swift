@@ -8,8 +8,36 @@
 import SwiftUI
 
 struct TransitionView: View {
+    
+    @State private var isFull = false
+    @State private var isSheet = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            HStack(spacing: 20) {
+                Button(action: {
+                    isFull.toggle()
+                }, label: {
+                    Text("Full")
+                })
+                
+                Button(action: {
+                    isSheet.toggle()
+                }, label: {
+                    Text("Sheet")
+                })
+                
+                NavigationLink("Push") {
+                    MovieView()
+                }
+            }
+            .sheet(isPresented: $isSheet, content: {
+                RenderView()
+            })
+            .fullScreenCover(isPresented: $isFull, content: {
+                ContentView()
+        })
+        }
     }
 }
 

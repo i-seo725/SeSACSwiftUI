@@ -9,7 +9,23 @@ import SwiftUI
 
 struct StartView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            HomeView()
+                .tabItem {
+                    Text("홈")
+                    Image(systemName: "star")
+                }
+            CategoryView()
+                .tabItem {
+                    Text("검색")
+                    Image(systemName: "pencil")
+                }
+            RenderView()
+                .tabItem {
+                    Text("설정")
+                    Image(systemName: "person")
+                }
+        }
     }
 }
 

@@ -6,13 +6,75 @@
 //
 
 import SwiftUI
+/*
+ VStack : 전체 데이터 로드
+ LazyVstack : 보여지는 부분만 로드, list도 lazy로 동작
+ AsyncImage : 킹피셔같이 사용할 수 있음
+ */
+
 
 struct PosterView: View {
+    
+    @State private var isPresent = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView(showsIndicators: false) {
+            LazyVStack {
+                ForEach(0..<40) { item in
+                    AsyncImageView()
+                        .frame(width: 100, height: 100)
+                        .onTapGesture {
+                            isPresent.toggle()
+                        }
+                }
+            }
+//            .frame(maxWidth: .infinity)
+        }
+        .background(.gray)
+        .sheet(isPresented: $isPresent, content: {
+            CategoryView()
+        })
+//        .contentMargins(50, for: .scrollContent)
+        
+    }
+}
+
+struct AsyncImageView: View {
+    
+    let url = URL(string: "https://picsum.photos/200")
+    
+    var body: some View {
+        AsyncImage(url: url) { data in
+            switch data {
+            case .empty:
+                ProgressView() //실패, 성공하기 전
+            case .success(let image):
+                image
+                    .frame(width: 100, height: 100)
+                    .scaledToFit()
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            case .failure(_):
+                Image(.bird)
+            @unknown default:
+                Image(.bird)
+            }
+        }
+
     }
 }
 
 #Preview {
-    PosterView()
+    AsyncImageView()
 }
+
+/*
+ AsyncImage(url: url) { image in
+     image
+         .frame(width: 100, height: 100)
+         .scaledToFit()
+         .clipShape(RoundedRectangle(cornerRadius: 10))
+//                .cornerRadius(10)
+ } placeholder: {
+     ProgressView()
+ }
+ */

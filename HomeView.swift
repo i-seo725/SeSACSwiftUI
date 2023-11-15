@@ -9,7 +9,49 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack(spacing: 20) {
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                    }
+                }
+                
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                    }
+                }
+                
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                    }
+                }
+                
+                ScrollView(.horizontal) {
+                    LazyHStack {
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                        AsyncImageView()
+                    }
+                }
+            }
+        }
     }
 }
 
