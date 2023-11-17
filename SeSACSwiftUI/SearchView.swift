@@ -44,6 +44,7 @@ struct Movie: Hashable, Identifiable {
     let id = UUID()
     let name: String
     let color = Color.random()
+    let count = Int.random(in: 1...100)
 }
 
 
@@ -51,6 +52,7 @@ struct SearchView: View {
     
     @State private var searchQuery = ""
     @State private var text = ""
+    @State private var showChart = false
     
     let movie = [
         Movie(name: "아이언맨"),
@@ -91,13 +93,36 @@ struct SearchView: View {
                 }
             }
             .navigationTitle("검색")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar(content: {
+                ToolbarItemGroup(placement: .topBarLeading) {
+                    Button {
+                        showChart.toggle()
+                    } label: {
+                        Image(systemName: "person.fill")
+                    }
+                }
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button {
+                        print("클릭되었습니다")
+                    } label: {
+                        Image(systemName: "star")
+                    }
+
+                }
+
+            })
             .navigationDestination(for: Movie.self) { item in
                 SearchDetailView(movie: item)
             }
-        }
-        .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "검색해보세요")
-        .onSubmit(of: .search) {
-            print(searchQuery)
+            .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "검색해보세요")
+            .onSubmit(of: .search) {
+                print(searchQuery)
+            }
+            .sheet(isPresented: $showChart, content: {
+                ChartView(movie: movie)
+            })
+
         }
     }
     

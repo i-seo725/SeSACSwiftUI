@@ -22,6 +22,8 @@
 		F4BC35F62B045BB3005B6E77 /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC35F52B045BB3005B6E77 /* PosterView.swift */; };
 		F4BC35F82B046F4C005B6E77 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC35F72B046F4C005B6E77 /* HomeView.swift */; };
 		F4BC35FA2B0471C7005B6E77 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BC35F92B0471C7005B6E77 /* StartView.swift */; };
+		F4F1C9922B06F39300B5AFBC /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1C9912B06F39300B5AFBC /* ChartView.swift */; };
+		F4F1C9942B0701A900B5AFBC /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F1C9932B0701A900B5AFBC /* GridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		F4BC35F52B045BB3005B6E77 /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
 		F4BC35F72B046F4C005B6E77 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		F4BC35F92B0471C7005B6E77 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		F4F1C9912B06F39300B5AFBC /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		F4F1C9932B0701A900B5AFBC /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,12 @@
 				F4BC35F52B045BB3005B6E77 /* PosterView.swift */,
 				F47DD62A2B03070B00997462 /* TamagotchiView.swift */,
 				F47DD5D72B01A8BF00997462 /* ContentView.swift */,
-				F47DD5D92B01A8C100997462 /* Assets.xcassets */,
-				F47DD5DB2B01A8C100997462 /* Preview Content */,
 				F47DD62C2B03379200997462 /* MovieView.swift */,
 				F47DD63E2B05A82F00997462 /* SearchView.swift */,
+				F4F1C9912B06F39300B5AFBC /* ChartView.swift */,
+				F47DD5D92B01A8C100997462 /* Assets.xcassets */,
+				F47DD5DB2B01A8C100997462 /* Preview Content */,
+				F4F1C9932B0701A900B5AFBC /* GridView.swift */,
 			);
 			path = SeSACSwiftUI;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 				F47DD5D82B01A8BF00997462 /* ContentView.swift in Sources */,
 				F4BC35FA2B0471C7005B6E77 /* StartView.swift in Sources */,
 				F47DD62D2B03379200997462 /* MovieView.swift in Sources */,
+				F4F1C9922B06F39300B5AFBC /* ChartView.swift in Sources */,
 				F47DD6412B05B45000997462 /* NavigationLazyView.swift in Sources */,
 				F47DD62B2B03070B00997462 /* TamagotchiView.swift in Sources */,
 				F47DD63F2B05A82F00997462 /* SearchView.swift in Sources */,
@@ -182,6 +189,7 @@
 				F47DD5E62B01C89700997462 /* RenderView.swift in Sources */,
 				F4BC35F42B044FEE005B6E77 /* CategoryView.swift in Sources */,
 				F47DD5D62B01A8BF00997462 /* SeSACSwiftUIApp.swift in Sources */,
+				F4F1C9942B0701A900B5AFBC /* GridView.swift in Sources */,
 				F4BC35F62B045BB3005B6E77 /* PosterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
